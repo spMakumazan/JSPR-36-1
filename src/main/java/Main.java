@@ -18,6 +18,7 @@ public class Main {
                                         "Connection: close\r\n" +
                                         "\r\n"
                         ).getBytes());
+                        responseStream.write(hello.getBytes());
                         responseStream.flush();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -36,6 +37,7 @@ public class Main {
                                         "Connection: close\r\n" +
                                         "\r\n"
                         ).getBytes());
+                        responseStream.write(hello.getBytes());
                         responseStream.flush();
                     } catch (IOException e) {
                         e.printStackTrace();

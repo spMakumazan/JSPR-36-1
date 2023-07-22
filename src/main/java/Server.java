@@ -26,6 +26,7 @@ public class Server implements Closeable {
     public Runnable connect(Socket socket) {
         return () -> {
             try (
+                    socket;
                     final var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     final var out = new BufferedOutputStream(socket.getOutputStream());
             ) {
